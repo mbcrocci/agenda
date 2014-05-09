@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1><a href="{{ url_for('add_contact') }}">Add new Contact</a></h1>
+<ul>
+	{% for contact in contacts %}
+	<li>
+		<h3> {{ contact.name }} </h3>
+		<strong>Email:</strong> {{ contact.email }} <br>
+		<strong>Number:</strong> {{ contact.number }}
+	</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

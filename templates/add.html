@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Add new Contact</h1>
+
+{% from "__formhelper.html" import render_field %}
+<form method=post action="/add_contact">
+  <dl>
+    {{ render_field(form.name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.number) }}
+  </dl>
+  <p><input type=submit value="add">
+</form>
+
+{% endblock %}

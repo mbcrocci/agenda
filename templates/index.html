@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<ul>
+	<li><a href="{{ url_for('add_contact') }}">Add new contact</a></li>
+	<li><a href="{{ url_for('show_contacts') }}">Show contacts</a></li>
+</ul>
+
+{% endblock %}
